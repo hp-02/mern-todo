@@ -44,6 +44,6 @@ app.put("/todos/:id", async (req, res, next) => {
         .catch(err => res.status(400).send(err));
 });
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
+app.listen(8080, () => {
+    console.log("Server started on port 8080");
 });
