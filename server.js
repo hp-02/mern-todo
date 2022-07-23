@@ -11,8 +11,9 @@ dotenv.config();
 const viewpath = __dirname + '/views/';
 app.use(express.static(viewpath));
 
+// mongodb://localhost:27017/mern-todo
 // `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.2a2mc.mongodb.net/mern-todo`
-mongoose.connect("mongodb://localhost:27017/mern-todo")
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.2a2mc.mongodb.net/mern-todo`)
     .then(() => console.log("Connected to DB"))
     .catch((err) => console.log(err));
 
