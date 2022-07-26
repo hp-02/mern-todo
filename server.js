@@ -43,7 +43,7 @@ app.get("/todos", validateUser, async function (req, res, next) {
 
 app.post("/todos", validateUser, async function (req, res, next) {
     const todo = new Todo(req.body);
-    todo.save().catch(err => res.status(400).send(err));
+    todo.save();
     delete todo.userId;
     return res.json(todo);
 });
