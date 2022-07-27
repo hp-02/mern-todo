@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const TodoSchema = new Schema({
     text: {
         type: String,
-        required: true,
         default: ""
     },
     complete: {
